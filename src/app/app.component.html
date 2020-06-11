@@ -1,6 +1,8 @@
+<b>PLEASE TYPE A DATE STARTING WITH '0' LIKE "06/06/2020" AND DELETE WITH BACKSPACE STARTNG FROM THE END</b>
+<DIV>After delete last number (0) a change event will be fired with the last valid date</DIV>
 <div>
     <mat-form-field>
-        <input matInput [formControl]="control" [matDatepicker]="picker">
+        <input matInput placeholder="DD/MM/YYYY" [formControl]="control" [matDatepicker]="picker">
         <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
         <mat-datepicker #picker></mat-datepicker>
     </mat-form-field>    
@@ -8,3 +10,4 @@
 <div>
     VALUE: {{control.value}}
 </div>
+<pre>{{changes | json}}</pre>
